@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Máy chủ VLESS miễn phí - 4G nền tiktok</title>
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background: #090d16;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    background: linear-gradient(90deg, #10b981, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .card {
+    background: #111827;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    margin-bottom: 20px;
+    border: 1px solid #1f2937;
+  }
+
+  .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9ca3af;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px currentColor;
+  }
+
+  .online { color: #10b981; background: #10b981; }
+
+  .sub-box {
+    font-size: 13px;
+    margin-bottom: 15px;
+    word-break: break-all;
+    font-family: "Consolas", monospace;
+    background: #030712;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+    color: #34d399;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .copy-btn {
+    background: #1f2937;
+    border: 1px solid #374151;
+    color: #9ca3af;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: inherit;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .copy-btn:hover {
+    background: #374151;
+    color: #f3f4f6;
+  }
+
+  .instruction-section {
+    margin-top: 25px;
+  }
+
+  .section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #f9fafb;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-left: 3px solid #3b82f6;
+    padding-left: 8px;
+  }
+
+  .guide-box {
+    background: #111827;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #d1d5db;
+    border: 1px solid #1f2937;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .guide-box p {
+    margin: 0 0 10px 0;
+  }
+
+  .guide-box ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .guide-box li {
+    margin-bottom: 6px;
+  }
+
+  .highlight {
+    color: #60a5fa;
+    font-weight: 500;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #4b5563;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="title">Máy chủ VLESS miễn phí - 4G nền tiktok</div>
+
+  <div class="card">
+    <span class="label">Subscription Link (VLESS-WS)</span>
+    <div class="status">
+      <div class="dot online"></div>
+      <span>Hạ tầng Cloudflare Anycast Active</span>
+    </div>
+    <div class="sub-box">
+      <span id="sub-url">https://vless4gtiktok.duckdns.org/frp_info.config</span>
+      <button class="copy-btn" onclick="copySubscription()">Copy URL</button>
+    </div>
+  </div>
+
+  <div class="instruction-section">
+
+    <div class="section-title">Android (Không Root) - v2rayNG</div>
+    <div class="guide-box">
+      <ul>
+        <li>Sao chép liên kết Subscription phía trên.</li>
+        <li>Mở ứng dụng <span class="highlight">v2rayNG</span> hoặc các ứng dụng tương tự trên thiết bị.</li>
+        <li>Bấm vào dấu <b>[+]</b> ở góc phải, chọn <b>Nhập cấu hình từ clipboard</b>.</li>
+        <li>Quay trở lại giao diện danh sách chính, bấm nút ba chấm dọc góc phải, chọn <b>Update subscription (Cập nhật danh sách đồng bộ)</b> để tải cấu hình về.</li>
+      </ul>
+    </div>
+    
+    <div class="section-title">Android (Rooted) - Magic V2Ray Module</div>
+    <div class="guide-box">
+      <p><i>Magic V2Ray là một công cụ mạng nâng cao được thiết kế riêng cho điện thoại Android đã root. Bằng cách kết hợp các lõi proxy hàng đầu hiện nay, dự án tạo ra một kết nối mượt mà xuyên suốt toàn hệ thống và bao phủ mọi ứng dụng của bạn.</i></p>
+      <ul>
+        <li>Tải xuống bản phát hành <b>.zip</b> mới nhất từ trang GitHub chính thức của dự án <a href="https://magicv2ray.duckdns.org/"><span class="highlight">Magic V2Ray</span></a>.</li>
+        <li>Flash file module thông qua trình quản lý <b>Magisk</b> hoặc <b>KernelSU manager</b>, sau đó tiến hành khởi động lại thiết bị.</li>
+        <li>Mở giao diện cấu hình Web UI cục bộ của ứng dụng bằng cách nhấn nút <b>Action</b> bên trong quản lý Magisk / KernelSU.</li>
+        <li>Điền link đăng ký vào ô nhập và nhấn nút <b>Process Connect Link</b> để tải danh sách cấu hình.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2026 VLESS Proxy by HuskyDG
+  </div>
+</div>
+
+<script>
+function copySubscription() {
+  const urlText = document.getElementById("sub-url").innerText;
+  navigator.clipboard.writeText(urlText).then(() => {
+    const btn = document.querySelector(".copy-btn");
+    btn.innerText = "Copied!";
+    btn.style.background = "#10b981";
+    btn.style.color = "#fff";
+    setTimeout(() => {
+      btn.innerText = "Copy URL";
+      btn.style.background = "#1f2937";
+      btn.style.color = "#9ca3af";
+    }, 2000);
+  }).catch(() => {
+    alert("Không thể sao chép tự động, vui lòng chọn text và copy thủ công.");
+  });
+}
+</script>
+
+</body>
+</html>
