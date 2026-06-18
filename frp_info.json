@@ -1,8 +1,8 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=tenant-ppc-publishers-impaired.trycloudflare.com&sni=tenant-ppc-publishers-impaired.trycloudflare.com#Cloudflare%20TLS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=tenant-ppc-publishers-impaired.trycloudflare.com#Cloudflare%20HTTP"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=sparc-filed-under-costume.trycloudflare.com&sni=sparc-filed-under-costume.trycloudflare.com#Cloudflare%20TLS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=sparc-filed-under-costume.trycloudflare.com#Cloudflare%20HTTP"
     ],
-    "ip": "74.249.78.35",
-    "start_time": 1781729290
+    "ip": "172.182.195.42",
+    "start_time": 1781747310
 }
