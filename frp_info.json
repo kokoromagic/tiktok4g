@@ -1,8 +1,8 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=entertainment-darwin-frank-wishing.trycloudflare.com&sni=entertainment-darwin-frank-wishing.trycloudflare.com#Cloudflare%20TLS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=entertainment-darwin-frank-wishing.trycloudflare.com#Cloudflare%20HTTP"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=joe-railway-seed-produced.trycloudflare.com&sni=joe-railway-seed-produced.trycloudflare.com#Cloudflare%20TLS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=joe-railway-seed-produced.trycloudflare.com#Cloudflare%20HTTP"
     ],
-    "ip": "52.176.125.113",
-    "start_time": 1782017514
+    "ip": "52.160.165.53",
+    "start_time": 1782035531
 }
