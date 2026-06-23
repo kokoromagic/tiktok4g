@@ -1,8 +1,8 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=photographers-examined-swap-hydrocodone.trycloudflare.com&sni=photographers-examined-swap-hydrocodone.trycloudflare.com#Cloudflare%20TLS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=photographers-examined-swap-hydrocodone.trycloudflare.com#Cloudflare%20HTTP"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=geometry-reads-premiere-determining.trycloudflare.com&sni=geometry-reads-premiere-determining.trycloudflare.com#Cloudflare%20TLS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=geometry-reads-premiere-determining.trycloudflare.com#Cloudflare%20HTTP"
     ],
-    "ip": "172.185.55.180",
-    "start_time": 1782161639
+    "ip": "20.171.20.21",
+    "start_time": 1782179653
 }
