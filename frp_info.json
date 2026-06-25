@@ -1,8 +1,8 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=explicit-enables-rica-guide.trycloudflare.com&sni=explicit-enables-rica-guide.trycloudflare.com#Cloudflare%20TLS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=explicit-enables-rica-guide.trycloudflare.com#Cloudflare%20HTTP"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=qui-meetup-medal-rides.trycloudflare.com&sni=qui-meetup-medal-rides.trycloudflare.com#Cloudflare%20TLS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=qui-meetup-medal-rides.trycloudflare.com#Cloudflare%20HTTP"
     ],
-    "ip": "64.236.134.231",
-    "start_time": 1782413840
+    "ip": "52.162.9.245",
+    "start_time": 1782431853
 }
