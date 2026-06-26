@@ -1,8 +1,8 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=flowers-argument-detail-boxes.trycloudflare.com&sni=flowers-argument-detail-boxes.trycloudflare.com#Cloudflare%20TLS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=flowers-argument-detail-boxes.trycloudflare.com#Cloudflare%20HTTP"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=ours-minneapolis-came-chef.trycloudflare.com&sni=ours-minneapolis-came-chef.trycloudflare.com#Cloudflare%20TLS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=ours-minneapolis-came-chef.trycloudflare.com#Cloudflare%20HTTP"
     ],
-    "ip": "68.154.116.65",
-    "start_time": 1782449866
+    "ip": "20.55.118.120",
+    "start_time": 1782467877
 }
