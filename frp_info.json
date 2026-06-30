@@ -1,8 +1,8 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=observed-favors-unavailable-scotland.trycloudflare.com&sni=observed-favors-unavailable-scotland.trycloudflare.com#Cloudflare%20TLS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=observed-favors-unavailable-scotland.trycloudflare.com#Cloudflare%20HTTP"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=gains-freelance-prince-companion.trycloudflare.com&sni=gains-freelance-prince-companion.trycloudflare.com#Cloudflare%20TLS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=gains-freelance-prince-companion.trycloudflare.com#Cloudflare%20HTTP"
     ],
-    "ip": "48.217.177.224",
-    "start_time": 1782774110
+    "ip": "52.159.243.198",
+    "start_time": 1782792123
 }
