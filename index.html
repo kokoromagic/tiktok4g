@@ -168,6 +168,32 @@
     font-weight: 500;
   }
 
+  .table-container {
+    overflow-x: auto;
+    margin-top: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  th, td {
+    padding: 8px 10px;
+    border: 1px solid #1f2937;
+  }
+
+  th {
+    background: #1f2937;
+    color: #f9fafb;
+  }
+
+  tr:nth-child(even) {
+    background: #151f32;
+  }
+
   .footer {
     text-align: center;
     margin-top: 30px;
@@ -214,11 +240,76 @@
 
   <div class="instruction-section">
 
+    <div class="section-title">Nguyên lý hoạt động (Bẻ băng thông)</div>
+    <div class="guide-box">
+      <p><b>Giải thích đơn giản nhất:</b> Khi bạn đăng ký gói TikTok, nhà mạng sẽ mở đường truyền "thả ga" cho riêng ứng dụng này. Máy chủ VLESS đóng vai trò như một <b>"vỏ bọc ngụy trang"</b>. Khi bạn vào Facebook, YouTube, hay lướt Web, phần mềm VPN trên máy sẽ gom toàn bộ dữ liệu đó lại, "dán nhãn" giả vờ bên ngoài là lưu lượng xem TikTok rồi gửi đi. Nhà mạng kiểm tra thấy nhãn TikTok nên cho đi qua miễn phí. Khi gói dữ liệu đến được máy chủ VLESS, máy chủ sẽ bóc lớp vỏ ngụy trang này ra và giúp bạn kết nối tới trang web đích mong muốn.</p>
+    </div>
+
+    <div class="section-title">So sánh Kinh tế: Nền TikTok vs Gói 4G thông thường</div>
+    <div class="guide-box">
+      <p>Gói cước thông thường giới hạn dung lượng khá gắt và có mức chi phí đắt hơn rất nhiều so với phương pháp tận dụng nền TikTok:</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nhà mạng</th>
+              <th>Gói 4G Thông Thường (Mắc & Giới hạn)</th>
+              <th>Giải Pháp Nền TikTok (Rẻ & Khủng)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Viettel</b></td>
+              <td>• Ngày: ST5K (5k/ngày, 500MB-1GB)<br>• Tháng: 3MXH100 (160k/tháng, 1GB/ngày)<br>• Năm: 12SD125 (1.500k/năm, 5GB/ngày)</td>
+              <td>• <b>T50K</b> (50k &rarr; 50GB/tháng)<br>• <b>T15KN</b> (60k &rarr; 100GB/tháng)<br>• <b>T5K</b> (150k &rarr; 450GB/tháng)<br>• <b>MXH100</b> (100k &rarr; Thả ga)</td>
+            </tr>
+            <tr>
+              <td><b>VinaPhone</b></td>
+              <td>• Ngày: D5 (5k/ngày, 1GB)<br>• Tháng: BIG90 (90k/tháng, chỉ có 7GB dung lượng cao rồi ngắt kết nối)</td>
+              <td>• <b>TK30</b> (30k/tháng &rarr; Không giới hạn dung lượng nền để bẻ băng thông)</td>
+            </tr>
+            <tr>
+              <td><b>MobiFone</b></td>
+              <td>• Ngày: D10 (10k/ngày, 8GB tốc độ cao)<br>• Tháng: Các gói HD như 6HD90 tính ra khoảng 75k/tháng chỉ được 7GB</td>
+              <td>• <b>TT1</b> (3k/ngày &rarr; Thả ga)<br>• <b>DK TIK30</b> (50k &rarr; 50GB/tháng)<br>• <b>DK TT80</b> (80k &rarr; Thả ga)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section-title">Hướng dẫn đăng ký gói cước TikTok các nhà mạng</div>
+    <div class="guide-box">
+      <p>Để xài 4G Miễn phí thông qua server, bạn cần đăng ký gói cước TikTok tương ứng với nhà mạng đang sử dụng:</p>
+      
+      <p><b>1. Viettel (Chọn gói theo nhu cầu):</b></p>
+      <ul>
+        <li>Dưới 50GB/tháng: Soạn <span class="highlight">T50K</span> gửi <span class="highlight">191</span> (50k &rarr; có 50GB/tháng)</li>
+        <li>Dưới 100GB/tháng: Soạn <span class="highlight">T15KN</span> gửi <span class="highlight">191</span> (15k/tuần &rarr; có 25GB/tuần. Dùng cả tháng hết 60k có 100GB, tự động gia hạn theo tuần)</li>
+        <li>Trên 100GB/tháng: Soạn <span class="highlight">T5K</span> gửi <span class="highlight">191</span> (5k/ngày &rarr; có 15GB/ngày. Dùng cả tháng hết 150k có 450GB, tự động gia hạn theo ngày)</li>
+        <li>Gói không giới hạn: Soạn <span class="highlight">MXH100</span> gửi <span class="highlight">191</span> (100k &rarr; Không giới hạn nền/tháng. Chỉ áp dụng cho thuê bao di động trả trước kích hoạt mới từ 01/01/2023)</li>
+      </ul>
+
+      <p style="margin-top: 12px;"><b>2. VinaPhone (Thực hiện lần lượt các bước):</b></p>
+      <ul>
+        <li>Soạn <span class="highlight">TK30</span> gửi <span class="highlight">888</span> &rarr; 30k/không giới hạn nền/tháng</li>
+        <li><i>Nên để sim 0đ tránh bị trừ tiền hoặc truy cập MoMo:</i> Vào mục Data 4G/5G &rarr; Thẻ data &rarr; Vinaphone &rarr; Chọn gói 1,5k/50MB/30 ngày &rarr; Mua ngay &rarr; Nạp.</li>
+      </ul>
+
+      <p style="margin-top: 12px;"><b>3. MobiFone (Chọn 1 trong các gói):</b></p>
+      <ul>
+        <li>Soạn <span class="highlight">DK TIK30</span> gửi <span class="highlight">9199</span> &rarr; 50k/50GB/tháng</li>
+        <li>Soạn <span class="highlight">TT1</span> gửi <span class="highlight">9199</span> &rarr; 3K/ngày (không giới hạn dung lượng nền)</li>
+        <li>Soạn <span class="highlight">DK TT80</span> gửi <span class="highlight">9199</span> &rarr; 80k/không giới hạn nền/tháng</li>
+      </ul>
+    </div>
+
     <div class="section-title">Android (Không Root) - v2rayNG</div>
     <div class="guide-box">
       <ul>
+        <li>Tải và cài đặt ứng dụng <span class="highlight"><a href="https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_2.2.5-fdroid_arm64-v8a.apk" target="_blank">v2rayNG</a></span>.</li>
         <li>Sao chép <b>Link đăng ký</b> phía trên.</li>
-        <li>Mở ứng dụng <span class="highlight">v2rayNG</span> hoặc các ứng dụng tương tự trên thiết bị.</li>
+        <li>Mở ứng dụng <span class="highlight"><a href="https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_2.2.5-fdroid_arm64-v8a.apk" target="_blank">v2rayNG</a></span> trên thiết bị.</li>
         <li>Bấm vào dấu <b>[+]</b> ở góc phải, chọn <b>Nhập cấu hình từ clipboard</b>.</li>
         <li>Quay trở lại giao diện danh sách chính, chọn máy chủ TLS hoặc HTTP để kết nối.</li>
       </ul>
@@ -238,7 +329,7 @@
   </div>
 
   <div class="footer">
-    © 2026 VLESS Proxy by kokoromagic & HuskyDG
+    © 2026 VLESS Proxy by kokoromagic & HuskyDG (Thế Vĩ)
   </div>
 </div>
 
