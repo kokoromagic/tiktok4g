@@ -105,6 +105,29 @@
     color: #f3f4f6;
   }
 
+  .telegram-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #0088cc;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    width: 100%;
+    transition: background 0.2s;
+    text-align: center;
+  }
+
+  .telegram-btn:hover {
+    background: #0077b3;
+  }
+
   .info-meta {
     display: flex;
     justify-content: space-between;
@@ -228,6 +251,10 @@
       <span id="sub-url">https://vless4gtiktok.duckdns.org/frp_info.config</span>
       <button class="copy-btn" onclick="copySubscription()">Copy URL</button>
     </div>
+    <a href="https://t.me/vless4gtiktok" target="_blank" class="telegram-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+      Tham gia nhóm Telegram hỗ trợ
+    </a>
   </div>
 
   <div class="instruction-section">
