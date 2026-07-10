@@ -177,7 +177,7 @@
     margin: 0 0 10px 0;
   }
 
-  .guide-box ul {
+  .guide-box ul, .guide-box ol {
     margin: 0;
     padding-left: 20px;
   }
@@ -234,6 +234,70 @@
   .expired-note span {
     color: #f59e0b;
   }
+
+  .toggle-server-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #ffffff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+    margin: 25px 0;
+  }
+
+  .toggle-server-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, #059669, #047857);
+  }
+
+  .toggle-server-btn svg {
+    transition: transform 0.3s;
+  }
+
+  .toggle-server-btn.active svg {
+    transform: rotate(180deg);
+  }
+
+  #self-host-article {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.4s ease;
+  }
+
+  #self-host-article.show {
+    max-height: 5000px; /* Giá trị lớn để bao quát nội dung dài */
+    opacity: 1;
+    transition: max-height 1s ease-in-out, opacity 0.5s ease;
+  }
+
+  .code-block {
+    font-family: "Consolas", monospace;
+    background: #030712;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #1f2937;
+    color: #f3f4f6;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+
+  .code-ini {
+    color: #f59e0b;
+  }
 </style>
 </head>
 <body>
@@ -255,6 +319,56 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
       Tham gia nhóm Telegram hỗ trợ
     </a>
+  </div>
+
+  <button class="toggle-server-btn" id="toggle-btn" onclick="toggleArticle()">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    Bạn muốn dựng server vless tại nhà? Nhấn vào đây!
+  </button>
+
+  <div id="self-host-article">
+    <div class="title" style="font-size: 20px; margin-top: 10px;">Tự Bản Thân Làm Máy Chủ: Server VLESS Không Cần VPS hay Domain!</div>
+    
+    <div class="instruction-section" style="margin-top: 10px;">
+      <div class="section-title">Tổng quan giải pháp</div>
+      <div class="guide-box">
+        <p>Nếu bạn không muốn tốn tiền thuê VPS hàng tháng hoặc gặp trở ngại do mạng nhà bị chặn NAT/CGNAT không có IP Public để mở cổng (Port Forwarding), giải pháp kết hợp giữa <b>Xray-Core</b> và <b>Cloudflare Tunnel (trycloudflare.com)</b> sẽ giúp bạn biến máy tính Windows, Linux hoặc điện thoại <b>Android</b> (qua Termux) thành một máy chủ VLESS chạy ngay tại nhà hoàn toàn miễn phí.</p>
+        <p>Cơ chế hoạt động dựa trên việc một tiến trình ngầm tạo đường hầm an toàn kết nối thẳng tới Edge Node của Cloudflare và cấp cho bạn một Subdomain ngẫu nhiên dạng <code>*.trycloudflare.com</code>, bỏ qua mọi rào cản gác cổng của nhà mạng.</p>
+      </div>
+
+      <div class="section-title">Bước 1: Khởi chạy VLESS Server lần đầu</div>
+      <div class="guide-box">
+        <p>Dự án mã nguồn mở này đã được viết tối ưu bằng Python, tự động tải phiên bản Xray và Cloudflared phù hợp với hệ điều hành của bạn mà không cần cài đặt thủ công.</p>
+        <p>Mở Terminal / Command Prompt lên và chạy tuần tự các lệnh sau:</p>
+        <pre class="code-block"># Tải source code từ kho lưu trữ về máy
+git clone https://github.com/vincentng295/xray_vless_ws_server
+
+# Di chuyển vào thư mục dự án
+cd xray_vless_ws_server
+
+# Cài đặt các thư viện Python cần thiết 
+pip install -r requirements.txt
+
+# Bật server lên (Lần sau chỉ cần chạy lệnh này)
+python main.py</pre>
+        <p><b>Kết quả:</b> Sau khi chạy, hệ thống sẽ ghi cấu hình v2ray vào trong file <b>frp_info.config</b>. Bạn chỉ cần sao chép link nhập vào ứng dụng v2rayNG/Shadowrocket để sử dụng.</p>
+        <p><i>💡 <b>Mẹo Android:</b> Bạn có thể cài đặt ứng dụng <b>Termux</b> từ F-Droid, gõ lệnh <code>pkg install python git -y</code> rồi chạy các bước tương tự để biến chiếc điện thoại cũ thành một server VPN mini chạy 24/7 cực kỳ tiết kiệm điện.</i></p>
+      </div>
+
+      <div class="section-title">Bước 2: Cố định kết nối bằng Cloudflare Workers</div>
+      <div class="guide-box">
+        <p>Nhược điểm của các bản thử nghiệm ở Bước 1 là mỗi lần bạn khởi động lại script, Cloudflare sẽ cấp một subdomain ngẫu nhiên mới khiến bạn phải cập nhật lại liên kết trên điện thoại rất phiền phức. Để cố định nó, ta sử dụng <b>Cloudflare Workers</b> làm cầu nối trung gian vĩnh viễn.</p>
+        
+        <p><b>Cách thiết lập tự động hóa:</b></p>
+        <ol>
+          <li>Mở file <a href="https://raw.githubusercontent.com/vincentng295/xray_vless_ws_server/refs/heads/main/_worker.js"><code>_worker.js</code></a> trong thư mục dự án ra, sửa dòng <code>if (password !== "xxxxxxxx")</code> bằng mật khẩu bí mật của bạn. Tiến hành sao chép toàn bộ nội dung file này, dán vào trang quản trị Cloudflare Workers của bạn rồi nhấn <b>Deploy</b>. Bạn sẽ nhận được một URL cố định (Ví dụ: <code>my-vless.username.workers.dev</code>).</li>
+          <li>Mở tiếp file cấu hình môi trường ẩn <code>.env</code> ở thư mục dự án trên máy tính/điện thoại ra và điền thông tin Webhook lưu lại:</li>
+        </ol>
+        <pre class="code-block"><span class="code-ini">WEBHOOK_URL</span>=https://my-vless.username.workers.dev/setapi?password=mat_khau_cua_ban</pre>
+        
+        <p><b>Nguyên lý đồng bộ:</b> Giờ đây, mỗi lần bạn chạy lệnh <code>python main.py</code> tại nhà, mã script sẽ tự động gửi tín hiệu thông báo cho Cloudflare Worker biết đường hầm tạm thời hôm nay là gì để lưu trữ vào bộ nhớ đệm RAM. Khi kết nối từ xa trên điện thoại, bạn chỉ cần điền duy nhất tên miền cố định của Worker (<code>my-vless.username.workers.dev</code>). Lưu lượng WebSocket sẽ tự động được định tuyến ngầm chuyển tiếp mượt mà về server tại phòng của bạn một cách an toàn mà không cần thay đổi cấu hình trên Client lần nào nữa!</p>
+      </div>
+    </div>
   </div>
 
   <div class="instruction-section">
@@ -326,9 +440,9 @@
     <div class="section-title">Android (Không Root) - v2rayNG</div>
     <div class="guide-box">
       <ul>
-        <li>Tải và cài đặt ứng dụng <span class="highlight"><a href="https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_2.2.5-fdroid_arm64-v8a.apk" target="_blank">v2rayNG</a></span>.</li>
+        <li>Tải và cài đặt ứng dụng <a href="https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_2.2.5-fdroid_arm64-v8a.apk" target="_blank"><span class="highlight">v2rayNG</span></a>.</li>
         <li>Sao chép <b>Link đăng ký</b> phía trên.</li>
-        <li>Mở ứng dụng <span class="highlight"><a href="https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_2.2.5-fdroid_arm64-v8a.apk" target="_blank">v2rayNG</a></span> trên thiết bị.</li>
+        <li>Mở ứng dụng <a href="https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_2.2.5-fdroid_arm64-v8a.apk" target="_blank"><span class="highlight">v2rayNG</span></a> trên thiết bị.</li>
         <li>Bấm vào dấu <b>[+]</b> ở góc phải, chọn <b>Nhập cấu hình từ clipboard</b>.</li>
         <li>Quay trở lại giao diện danh sách chính, chọn máy chủ TLS hoặc HTTP để kết nối.</li>
       </ul>
@@ -368,6 +482,14 @@ function copySubscription() {
   }).catch(() => {
     alert("Không thể sao chép tự động, vui lòng chọn text và copy thủ công.");
   });
+}
+
+function toggleArticle() {
+  const article = document.getElementById("self-host-article");
+  const btn = document.getElementById("toggle-btn");
+  
+  article.classList.toggle("show");
+  btn.classList.toggle("active");
 }
 </script>
 
