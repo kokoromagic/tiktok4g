@@ -277,7 +277,7 @@
   }
 
   #self-host-article.show {
-    max-height: 5000px; /* Giá trị lớn để bao quát nội dung dài */
+    max-height: 5000px;
     opacity: 1;
     transition: max-height 1s ease-in-out, opacity 0.5s ease;
   }
@@ -297,6 +297,34 @@
 
   .code-ini {
     color: #f59e0b;
+  }
+
+  .kv-steps {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+  }
+
+  .kv-steps > li {
+    background: #151f32;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 15px !important;
+    border: 1px solid #1f2937;
+  }
+
+  .kv-img-placeholder {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    margin: 10px auto;
+    border-radius: 6px;
+    border: 1px solid #374151;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+  }
+
+  .kv-img-placeholder:hover {
+    opacity: 1;
   }
 </style>
 </head>
@@ -368,6 +396,38 @@ python main.py</pre>
         
         <p><b>Nguyên lý đồng bộ:</b> Giờ đây, mỗi lần bạn chạy lệnh <code>python main.py</code> tại nhà, mã script sẽ tự động gửi tín hiệu thông báo cho Cloudflare Worker biết đường hầm tạm thời hôm nay là gì để lưu trữ vào bộ nhớ đệm RAM. Khi kết nối từ xa trên điện thoại, bạn chỉ cần điền duy nhất tên miền cố định của Worker (<code>my-vless.username.workers.dev</code>). Lưu lượng WebSocket sẽ tự động được định tuyến ngầm chuyển tiếp mượt mà về server tại phòng của bạn một cách an toàn mà không cần thay đổi cấu hình trên Client lần nào nữa!</p>
       </div>
+
+      <div class="section-title">Bước 3: Cấu hình KV Storage chống mất cấu hình (Khuyên dùng)</div>
+      <div class="guide-box">
+        <p>Mặc định, biến <code>GLOBAL_TARGET_HOST</code> và <code>GLOBAL_TARGET_PATH</code> của Worker chỉ được lưu trên <b>RAM tạm thời</b>. Nếu Worker không có lượt truy cập trong thời gian ngắn hoặc Cloudflare khởi động lại hệ thống, RAM sẽ bị xóa sạch, khiến bạn gặp lỗi <span class="highlight">503 Service Unavailable</span> rất khó chịu.</p>
+        <p>Để khắc phục triệt để, bạn hãy gán bộ nhớ <b>Workers KV</b> nhằm lưu cấu hình vĩnh viễn theo các bước trực quan dưới đây:</p>
+        
+        <ol class="kv-steps">
+          <li>
+            <b>1. Truy cập Workers KV:</b> Tại trang Dashboard Cloudflare của bạn, điều hướng tới menu bên trái chọn <b>Storage & databases</b> &rarr; Click vào mục <b>Workers KV</b>.
+          </li>
+          <li>
+            <b>2. Tạo không gian lưu trữ (Instance):</b> Nhấp vào nút xanh <b>Create Instance</b> (hoặc <b>Create Namespace</b>) ở góc trên bên phải.
+          </li>
+          <li>
+            <b>3. Đặt tên Namespace:</b> Nhập tên bạn muốn đặt (Ví dụ: <code>tuandeptrai_vless</code>) rồi ấn nút <b>Create</b> để xác nhận lưu.
+          </li>
+          <li>
+            <b>4. Vào phần Cài đặt của Worker:</b> Quay lại giao diện quản lý đoạn code Worker của bạn (dự án <code>private-server</code>), chọn tab <b>Settings</b> ở thanh menu trên cùng.
+          </li>
+          <li>
+            <b>5. Đi tới liên kết tài nguyên (Bindings):</b> Di chuyển tiếp sang tab phụ tên là <b>Bindings</b> bên cạnh mục Cấu hình chung.
+          </li>
+          <li>
+            <b>6. Thêm Binding mới:</b> Nhấn vào nút xanh <b>Add binding +</b> và chọn dòng <b>KV namespace</b> ở bảng hiển thị ra.
+          </li>
+          <li>
+            <b>7. Ánh xạ biến môi trường:</b> Điền chính xác ô <b>Variable name</b> là <code class="highlight">KV_CONFIG</code> (bắt buộc đúng chữ hoa để khớp với code trong Worker). Ở ô <b>KV namespace</b>, hãy bấm chọn tên phân vùng bạn vừa tạo ở Bước 3. Cuối cùng, ấn nút <b>Add Binding</b> (hoặc Save) để hoàn tất.
+          </li>
+        </ol>
+        <p>🎉 <b>Hoàn thành:</b> Giờ đây Worker của bạn đã được trang bị "ổ cứng" lưu trữ. Kể từ lần Python đồng bộ webhook tiếp theo, các thông số cấu hình sẽ tự động được ghi giữ lại mãi mãi, không bao giờ lo chết kết nối đột ngột nữa!</p>
+      </div>
+
     </div>
   </div>
 
