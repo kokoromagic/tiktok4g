@@ -1,12 +1,12 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev&sni=vless-ws-tunnel.thevi917.workers.dev#api24-normal-alisg.tiktokv.com%20TLS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev#api24-normal-alisg.tiktokv.com%20NO%20TLS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-useast1a.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev&sni=vless-ws-tunnel.thevi917.workers.dev#api24-normal-useast1a.tiktokv.com%20TLS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-useast1a.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev#api24-normal-useast1a.tiktokv.com%20NO%20TLS"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev&sni=vless-ws-tunnel.thevi917.workers.dev#Tunnel%201%20TLS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-alisg.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev#Tunnel%201%20NO%20TLS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-useast1a.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev&sni=vless-ws-tunnel.thevi917.workers.dev#Tunnel%202%20TLS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-useast1a.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev#Tunnel%202%20NO%20TLS"
     ],
-    "ip": "48.211.211.33",
-    "wshost": "simon-surname-associates-gore.trycloudflare.com",
+    "ip": "172.183.91.44",
+    "wshost": "diet-maui-detailed-allergy.trycloudflare.com",
     "wspath": "/tiktok4g",
-    "start_time": 1783874534
+    "start_time": 1783910564
 }
