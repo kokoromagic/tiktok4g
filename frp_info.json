@@ -5,8 +5,8 @@
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-useast1a.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev&sni=vless-ws-tunnel.thevi917.workers.dev#Tunnel%202%20TLS",
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-useast1a.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev#Tunnel%202%20NO%20TLS"
     ],
-    "ip": "20.169.100.160",
-    "wshost": "multi-nov-indices-donor.trycloudflare.com",
+    "ip": "172.184.213.163",
+    "wshost": "suited-earning-remaining-citizens.trycloudflare.com",
     "wspath": "/tiktok4g",
-    "start_time": 1784733207
+    "start_time": 1784751223
 }
