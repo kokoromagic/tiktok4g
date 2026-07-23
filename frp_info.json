@@ -5,8 +5,8 @@
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-useast1a.tiktokv.com:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev&sni=vless-ws-tunnel.thevi917.workers.dev#Tunnel%202%20TLS",
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@api24-normal-useast1a.tiktokv.com:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev#Tunnel%202%20NO%20TLS"
     ],
-    "ip": "135.232.185.23",
-    "wshost": "whose-fine-website-about.trycloudflare.com",
+    "ip": "172.184.254.66",
+    "wshost": "politics-clicking-earrings-wednesday.trycloudflare.com",
     "wspath": "/tiktok4g",
-    "start_time": 1784823276
+    "start_time": 1784841294
 }
