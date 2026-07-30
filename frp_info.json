@@ -5,8 +5,8 @@
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@vnpt-vn.duckdns.org:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev&sni=vless-ws-tunnel.thevi917.workers.dev#Tunnel%202%20TLS",
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@vnpt-vn.duckdns.org:80?type=ws&encryption=none&security=&path=%2Ftiktok4g&host=vless-ws-tunnel.thevi917.workers.dev#Tunnel%202%20NO%20TLS"
     ],
-    "ip": "64.236.153.148",
-    "wshost": "colleagues-fork-stamp-jill.trycloudflare.com",
+    "ip": "172.182.213.66",
+    "wshost": "imposed-gem-creating-liquid.trycloudflare.com",
     "wspath": "/tiktok4g",
-    "start_time": 1785377853
+    "start_time": 1785395878
 }
