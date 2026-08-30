@@ -9,7 +9,7 @@
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@vnpt.theworkpc.com:443?type=xhttp&encryption=none&security=tls&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn&mode=packet-up&alpn=h3%2Ch2#Free%20VNPT%20XHTTP%20TLS",
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@vnpt.theworkpc.com:80?type=xhttp&encryption=none&security=&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&mode=packet-up#Free%20VNPT%20XHTTP%20No%20TLS"
     ],
-    "ip": "20.83.175.18",
+    "ip": "68.220.59.245",
     "wshost": "free4g.huskydg.io.vn",
     "wspath": "/tiktok4g",
     "transport": [
@@ -17,5 +17,5 @@
         "xhttp"
     ],
     "xhttp_mode": "packet-up",
-    "start_time": 1788095078
+    "start_time": 1788113091
 }
