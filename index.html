@@ -434,49 +434,21 @@ python main.py</pre>
         <p><i>💡 <b>Mẹo Android:</b> Bạn có thể cài đặt ứng dụng <b>Termux</b> từ F-Droid, gõ lệnh <code>pkg install python git -y</code> rồi chạy các bước tương tự để biến chiếc điện thoại cũ thành một server VPN mini chạy 24/7 cực kỳ tiết kiệm điện.</i></p>
       </div>
 
-      <div class="section-title">Bước 2: Cố định kết nối bằng Cloudflare Workers</div>
+      <div class="section-title">Bước 2: Cố định kết nối bằng tên miền của bạn</div>
       <div class="guide-box">
-        <p>Nhược điểm của các bản thử nghiệm ở Bước 1 là mỗi lần bạn khởi động lại script, Cloudflare sẽ cấp một subdomain ngẫu nhiên mới khiến bạn phải cập nhật lại liên kết trên điện thoại rất phiền phức. Để cố định nó, ta sử dụng <b>Cloudflare Workers</b> làm cầu nối trung gian vĩnh viễn.</p>
-        
-        <p><b>Cách thiết lập tự động hóa:</b></p>
-        <ol>
-          <li>Mở file <a href="https://raw.githubusercontent.com/vincentng295/xray_vless_ws_server/refs/heads/main/_worker.js"><code>_worker.js</code></a> trong thư mục dự án ra, sửa dòng <code>if (password !== "xxxxxxxx")</code> bằng mật khẩu bí mật của bạn. Tiến hành sao chép toàn bộ nội dung file này, dán vào trang quản trị Cloudflare Workers của bạn rồi nhấn <b>Deploy</b>. Bạn sẽ nhận được một URL cố định (Ví dụ: <code>my-vless.username.workers.dev</code>).</li>
-          <li>Mở tiếp file cấu hình môi trường ẩn <code>.env</code> ở thư mục dự án trên máy tính/điện thoại ra và điền thông tin Webhook lưu lại:</li>
-        </ol>
-        <pre class="code-block"><span class="code-ini">WEBHOOK_URL</span>=https://my-vless.username.workers.dev/setapi?password=mat_khau_cua_ban</pre>
-        
-        <p><b>Nguyên lý đồng bộ:</b> Giờ đây, mỗi lần bạn chạy lệnh <code>python main.py</code> tại nhà, mã script sẽ tự động gửi tín hiệu thông báo cho Cloudflare Worker biết đường hầm tạm thời hôm nay là gì để lưu trữ vào bộ nhớ đệm RAM. Khi kết nối từ xa trên điện thoại, bạn chỉ cần điền duy nhất tên miền cố định của Worker (<code>my-vless.username.workers.dev</code>). Lưu lượng WebSocket sẽ tự động được định tuyến ngầm chuyển tiếp mượt mà về server tại phòng của bạn một cách an toàn mà không cần thay đổi cấu hình trên Client lần nào nữa!</p>
-      </div>
+        <p>Nhược điểm của các bản thử nghiệm ở Bước 1 là mỗi lần bạn khởi động lại script, Cloudflare sẽ cấp một subdomain ngẫu nhiên mới khiến bạn phải cập nhật lại liên kết trên điện thoại rất phiền phức. Để cố định nó, cách đơn giản và ổn định nhất là dùng <b>tên miền riêng của bạn</b> kết hợp với <b>Cloudflare Tunnel</b> (loại Cloudflared, không phải tunnel tạm thời).</p>
+        <p><i>Tên miền giá rẻ có thể mua tại các nhà cung cấp như <a href="https://nhanhoa.com" target="_blank">nhanhoa.com</a>.</i></p>
 
-      <div class="section-title">Bước 3: Cấu hình KV Storage chống mất cấu hình (Khuyên dùng)</div>
-      <div class="guide-box">
-        <p>Mặc định, biến <code>GLOBAL_TARGET_HOST</code> và <code>GLOBAL_TARGET_PATH</code> của Worker chỉ được lưu trên <b>RAM tạm thời</b>. Nếu Worker không có lượt truy cập trong thời gian ngắn hoặc Cloudflare khởi động lại hệ thống, RAM sẽ bị xóa sạch, khiến bạn gặp lỗi <span class="highlight">503 Service Unavailable</span> rất khó chịu.</p>
-        <p>Để khắc phục triệt để, bạn hãy gán bộ nhớ <b>Workers KV</b> nhằm lưu cấu hình vĩnh viễn theo các bước trực quan dưới đây:</p>
-        
-        <ol class="kv-steps">
-          <li>
-            <b>1. Truy cập Workers KV:</b> Tại trang Dashboard Cloudflare của bạn, điều hướng tới menu bên trái chọn <b>Storage & databases</b> &rarr; Click vào mục <b>Workers KV</b>.
-          </li>
-          <li>
-            <b>2. Tạo không gian lưu trữ (Instance):</b> Nhấp vào nút xanh <b>Create Instance</b> (hoặc <b>Create Namespace</b>) ở góc trên bên phải.
-          </li>
-          <li>
-            <b>3. Đặt tên Namespace:</b> Nhập tên bạn muốn đặt (Ví dụ: <code>tuandeptrai_vless</code>) rồi ấn nút <b>Create</b> để xác nhận lưu.
-          </li>
-          <li>
-            <b>4. Vào phần Cài đặt của Worker:</b> Quay lại giao diện quản lý đoạn code Worker của bạn (dự án <code>private-server</code>), chọn tab <b>Settings</b> ở thanh menu trên cùng.
-          </li>
-          <li>
-            <b>5. Đi tới liên kết tài nguyên (Bindings):</b> Di chuyển tiếp sang tab phụ tên là <b>Bindings</b> bên cạnh mục Cấu hình chung.
-          </li>
-          <li>
-            <b>6. Thêm Binding mới:</b> Nhấn vào nút xanh <b>Add binding +</b> và chọn dòng <b>KV namespace</b> ở bảng hiển thị ra.
-          </li>
-          <li>
-            <b>7. Ánh xạ biến môi trường:</b> Điền chính xác ô <b>Variable name</b> là <code class="highlight">KV_CONFIG</code> (bắt buộc đúng chữ hoa để khớp với code trong Worker). Ở ô <b>KV namespace</b>, hãy bấm chọn tên phân vùng bạn vừa tạo ở Bước 3. Cuối cùng, ấn nút <b>Add Binding</b> (hoặc Save) để hoàn tất.
-          </li>
+        <p><b>Cách thiết lập:</b></p>
+        <ol>
+          <li>Thêm tên miền của bạn vào tài khoản Cloudflare (đổi Nameserver theo hướng dẫn của Cloudflare nếu chưa làm).</li>
+          <li>Trong <b>Cloudflare Zero Trust</b>, vào mục <b>Networks &rarr; Tunnels</b>, tạo một tunnel loại <b>Cloudflared</b> rồi sao chép <b>connector token</b> được cấp.</li>
+          <li>Mở file cấu hình môi trường ẩn <code>.env</code> ở thư mục dự án, dán token vừa sao chép vào và điền subdomain bạn muốn dùng:</li>
         </ol>
-        <p>🎉 <b>Hoàn thành:</b> Giờ đây Worker của bạn đã được trang bị "ổ cứng" lưu trữ. Kể từ lần Python đồng bộ webhook tiếp theo, các thông số cấu hình sẽ tự động được ghi giữ lại mãi mãi, không bao giờ lo chết kết nối đột ngột nữa!</p>
+        <pre class="code-block"><span class="code-ini">TUNNEL_TOKEN</span>=eyJhSWQiOiI...
+<span class="code-ini">WS_HOST</span>=v2ray.yourdomain.com</pre>
+
+        <p><b>Nguyên lý hoạt động:</b> Script sẽ tự khởi chạy <code>cloudflared</code> ở chế độ kết nối ra ngoài (outbound) tới Edge Node của Cloudflare bằng token trên, nên bạn <b>không cần</b> tạo bản ghi A/AAAA trỏ về máy/VPS của mình, cũng không cần mở cổng (Port Forwarding) cho Xray. Sau khi chạy <code>python main.py</code>, tên miền <code>v2ray.yourdomain.com</code> sẽ luôn trỏ ổn định tới server tại nhà bạn, không đổi mỗi lần khởi động lại như tunnel tạm thời ở Bước 1.</p>
       </div>
 
     </div>
