@@ -5,7 +5,7 @@
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@172.67.168.158:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn#VinaMoney%20WS",
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@172.67.168.158:443?type=xhttp&encryption=none&security=tls&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn&mode=packet-up&alpn=h3%2Ch2#VinaMoney%20XHTTP"
     ],
-    "ip": "20.55.47.117",
+    "ip": "20.171.21.219",
     "wshost": "free4g.huskydg.io.vn",
     "wspath": "/tiktok4g",
     "transport": [
@@ -13,5 +13,5 @@
         "xhttp"
     ],
     "xhttp_mode": "packet-up",
-    "start_time": 1789228134
+    "start_time": 1789246148
 }
