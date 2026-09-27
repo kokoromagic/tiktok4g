@@ -1,17 +1,17 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@172.66.1.232:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn#Tiktok%20WS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@172.66.1.232:443?type=xhttp&encryption=none&security=tls&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn&mode=auto&alpn=h3%2Ch2#Tiktok%20XHTTP",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@172.67.168.158:443?type=ws&encryption=none&security=tls&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn#VinaMoney%20WS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@172.67.168.158:443?type=xhttp&encryption=none&security=tls&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn&mode=auto&alpn=h3%2Ch2#VinaMoney%20XHTTP"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.io.vn:443?type=ws&encryption=none&security=tls&ech=free4g.huskydg.io.vn%2Bhttps%3A%2F%2F1.1.1.1%2Fdns-query&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn#Tiktok%20WS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.io.vn:443?type=xhttp&encryption=none&security=tls&ech=free4g.huskydg.io.vn%2Bhttps%3A%2F%2F1.1.1.1%2Fdns-query&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn&mode=auto&alpn=h3%2Ch2#Tiktok%20XHTTP",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.io.vn:443?type=ws&encryption=none&security=tls&ech=free4g.huskydg.io.vn%2Bhttps%3A%2F%2F1.1.1.1%2Fdns-query&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn#Free%20VNPT%20WS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.io.vn:443?type=xhttp&encryption=none&security=tls&ech=free4g.huskydg.io.vn%2Bhttps%3A%2F%2F1.1.1.1%2Fdns-query&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn&mode=auto&alpn=h3%2Ch2#Free%20VNPT%20XHTTP"
     ],
-    "ip": "40.116.92.113",
+    "ip": "145.132.100.85",
     "wshost": "free4g.huskydg.io.vn",
     "wspath": "/tiktok4g",
     "transport": [
-        "websocket",
-        "xhttp"
+        "xhttp",
+        "websocket"
     ],
     "xhttp_mode": "auto",
-    "start_time": 1790471146
+    "start_time": 1790480583
 }
