@@ -1,17 +1,17 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.io.vn:443?type=ws&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn#Tiktok%20WS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.io.vn:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn&mode=auto&alpn=h3%2Ch2#Tiktok%20XHTTP",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.io.vn:443?type=ws&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn#Free%20VNPT%20WS",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.io.vn:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=free4g.huskydg.io.vn&sni=free4g.huskydg.io.vn&mode=auto&alpn=h3%2Ch2#Free%20VNPT%20XHTTP"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.dpdns.org:443?type=ws&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org#Tiktok%20WS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#Tiktok%20XHTTP",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.dpdns.org:443?type=ws&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org#Free%20VNPT%20WS",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#Free%20VNPT%20XHTTP"
     ],
-    "ip": "20.106.183.56",
-    "wshost": "free4g.huskydg.io.vn",
+    "ip": "20.55.86.55",
+    "wshost": "hakuma.huskydg.dpdns.org",
     "wspath": "/tiktok4g",
     "transport": [
         "xhttp",
         "websocket"
     ],
     "xhttp_mode": "auto",
-    "start_time": 1791085790
+    "start_time": 1791092471
 }
