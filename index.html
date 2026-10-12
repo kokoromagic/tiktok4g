@@ -4,378 +4,120 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Máy chủ thử nghiệm VLESS miễn phí - 4G nền tiktok</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  * {
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  body {
-    margin: 0;
-    background: #090d16;
-    color: #e2e8f0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 40px 20px;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 550px;
-  }
-
-  .title {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    text-align: center;
-    background: linear-gradient(90deg, #10b981, #3b82f6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .card {
-    background: #111827;
-    border-radius: 14px;
-    padding: 22px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    margin-bottom: 20px;
-    border: 1px solid #1f2937;
-  }
-
-  .label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #9ca3af;
-    margin-bottom: 8px;
-    display: block;
-  }
-
-  .status {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 14px;
-    font-weight: 500;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    box-shadow: 0 0 8px currentColor;
-  }
-
-  .online { color: #10b981; background: #10b981; }
-
-  .sub-box {
-    font-size: 13px;
-    margin-bottom: 15px;
-    word-break: break-all;
-    font-family: "Consolas", monospace;
-    background: #030712;
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px solid #1f2937;
-    color: #34d399;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .copy-btn {
-    background: #1f2937;
-    border: 1px solid #374151;
-    color: #9ca3af;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 11px;
-    font-family: inherit;
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-
-  .copy-btn:hover {
-    background: #374151;
-    color: #f3f4f6;
-  }
-
-  .telegram-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: #0088cc;
-    color: #ffffff;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    width: 100%;
-    transition: background 0.2s;
-    text-align: center;
-  }
-
-  .telegram-btn:hover {
-    background: #0077b3;
-  }
-
-  .sync-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-bottom: 14px;
-  }
-
-  .sync-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    background: #1f2937;
-    border: 1px solid #374151;
-    color: #e2e8f0;
-    padding: 10px 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 12.5px;
-    font-weight: 500;
-    font-family: inherit;
-    text-decoration: none;
-    transition: all 0.2s;
-    text-align: center;
-  }
-
-  .sync-btn:hover {
-    background: #374151;
-    border-color: #4b5563;
-  }
-
-  .sync-btn.disabled {
-    opacity: 0.45;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-
-  .sync-note {
-    font-size: 11px;
-    color: #6b7280;
-    margin: -4px 0 15px 0;
-    font-style: italic;
-  }
-
-  .info-meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    color: #9ca3af;
-    border-top: 1px dashed #1f2937;
-    padding-top: 12px;
-    margin-top: 5px;
-  }
-  
-  .info-meta span strong {
-    color: #f3f4f6;
-  }
-  
-  .time-expired {
-    color: #ef4444 !important;
-  }
-
-  .instruction-section {
-    margin-top: 25px;
-  }
-
-  .section-title {
-    font-size: 15px;
-    font-weight: 600;
-    color: #f9fafb;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-left: 3px solid #3b82f6;
-    padding-left: 8px;
-  }
-
-  .guide-box {
-    background: #111827;
-    padding: 16px;
-    border-radius: 10px;
-    font-size: 13px;
-    color: #d1d5db;
-    border: 1px solid #1f2937;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-
-  .guide-box p {
-    margin: 0 0 10px 0;
-  }
-
-  .guide-box ul, .guide-box ol {
-    margin: 0;
-    padding-left: 20px;
-  }
-
-  .guide-box li {
-    margin-bottom: 6px;
-  }
-
-  .highlight {
-    color: #60a5fa;
-    font-weight: 500;
-  }
-
-  .table-container {
-    overflow-x: auto;
-    margin-top: 10px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12px;
-    text-align: left;
-  }
-
-  th, td {
-    padding: 8px 10px;
-    border: 1px solid #1f2937;
-  }
-
-  th {
-    background: #1f2937;
-    color: #f9fafb;
-  }
-
-  tr:nth-child(even) {
-    background: #151f32;
-  }
-
-  .footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 12px;
-    color: #4b5563;
-  }
-
-  .expired-note {
-    font-size: 11px;
-    color: #9ca3af;
-    margin-top: 8px;
-    font-style: italic;
-  }
-
-  .expired-note span {
-    color: #f59e0b;
-  }
-
-  .toggle-server-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #10b981, #059669);
-    color: #ffffff;
-    border: none;
-    padding: 14px 20px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    width: 100%;
-    transition: all 0.3s ease;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
-    margin: 25px 0;
-  }
-
-  .toggle-server-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-    background: linear-gradient(135deg, #059669, #047857);
-  }
-
-  .toggle-server-btn svg {
-    transition: transform 0.3s;
-  }
-
-  .toggle-server-btn.active svg {
-    transform: rotate(180deg);
-  }
-
-  #self-host-article {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.4s ease;
-  }
-
-  #self-host-article.show {
-    max-height: 5000px;
-    opacity: 1;
-    transition: max-height 1s ease-in-out, opacity 0.5s ease;
-  }
-
-  .code-block {
-    font-family: "Consolas", monospace;
-    background: #030712;
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #1f2937;
-    color: #f3f4f6;
-    overflow-x: auto;
-    font-size: 12px;
-    line-height: 1.5;
-    margin: 10px 0;
-  }
-
-  .code-ini {
-    color: #f59e0b;
-  }
-
-  .kv-steps {
-    list-style-type: none !important;
-    padding-left: 0 !important;
-  }
-
-  .kv-steps > li {
-    background: #151f32;
-    padding: 14px;
-    border-radius: 8px;
-    margin-bottom: 15px !important;
-    border: 1px solid #1f2937;
-  }
-
-  .kv-img-placeholder {
-    display: block;
-    width: 100%;
-    max-width: 450px;
-    margin: 10px auto;
-    border-radius: 6px;
-    border: 1px solid #374151;
-    opacity: 0.85;
-    transition: opacity 0.2s;
-  }
-
-  .kv-img-placeholder:hover {
-    opacity: 1;
-  }
+:root{
+  --bg:#08171c; --mist:#12343b; --card:rgba(14,34,42,.82); --line:rgba(125,211,252,.22);
+  --ice:#7dd3fc; --ice2:#bae6fd; --fur:#eaf3f7; --red:#e23b3b; --red2:#b81f2a;
+  --flame:#ff9a3c; --flame2:#ffd36b; --leather:#5a3a26; --leather2:#3f271a;
+  --text:#dcebf0; --muted:#8fa9b3; --code:#04100f;
+}
+*{box-sizing:border-box;font-family:"Be Vietnam Pro","Segoe UI",Tahoma,Geneva,Verdana,sans-serif}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:36px 18px 48px;
+  background:
+    radial-gradient(900px 500px at 85% -10%,rgba(125,211,252,.20),transparent 60%),
+    radial-gradient(700px 500px at -10% 105%,rgba(255,154,60,.18),transparent 60%),
+    repeating-linear-gradient(100deg,rgba(255,255,255,.018) 0 2px,transparent 2px 46px),
+    linear-gradient(180deg,#0d252b,var(--bg) 60%);
+  background-attachment:fixed;
+}
+.bg-hakuma{position:fixed;inset:0;z-index:0;pointer-events:none;background:url("./hakuma_2.jpg") center 55%/auto min(88vh,820px) no-repeat;opacity:.2;filter:saturate(1.1) blur(.6px);-webkit-mask-image:radial-gradient(ellipse 48% 46% at 50% 55%,#000 30%,transparent 78%);mask-image:radial-gradient(ellipse 48% 46% at 50% 55%,#000 30%,transparent 78%)}
+.embers{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.embers i{position:absolute;bottom:-12px;width:5px;height:5px;border-radius:50% 0 50% 0;background:var(--flame);opacity:0;animation:rise linear infinite;filter:drop-shadow(0 0 4px var(--flame))}
+@keyframes rise{0%{transform:translate(0,0) rotate(0);opacity:0}10%{opacity:.85}100%{transform:translate(var(--dx),-105vh) rotate(260deg);opacity:0}}
+.container{width:100%;max-width:560px;position:relative;z-index:1}
+.hero{display:flex;justify-content:center;margin-bottom:6px}
+.hero svg{width:132px;height:auto;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 8px 18px rgba(125,211,252,.28))}
+@keyframes float{50%{transform:translateY(-6px)}}
+.title{font-size:25px;font-weight:800;line-height:1.3;text-align:center;color:var(--fur);margin-bottom:8px;letter-spacing:-.01em;text-shadow:0 2px 14px rgba(125,211,252,.25)}
+.title em{font-style:normal;color:var(--flame2)}
+.tagline{text-align:center;font-size:12px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.spear{position:relative;height:5px;margin:0 28px 26px;border-radius:3px;background:linear-gradient(90deg,transparent,#7b8f9a 12%,#cfe0ea 75%,var(--ice))}
+.spear::before{content:"";position:absolute;left:12%;top:-3px;width:14px;height:11px;border-radius:2px;background:var(--red)}
+.spear::after{content:"";position:absolute;right:-18px;top:-9px;border-left:30px solid var(--ice2);border-top:11px solid transparent;border-bottom:11px solid transparent;filter:drop-shadow(0 0 6px var(--ice))}
+.card{position:relative;background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:18px;padding:24px 22px 22px;margin-bottom:20px;border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.06);overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--red2),var(--red),var(--flame))}
+.label{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--ice);margin-bottom:10px;display:block;font-weight:600}
+.status{display:flex;align-items:center;gap:9px;margin-bottom:14px;font-weight:500}
+.dot{width:10px;height:10px;border-radius:50%;box-shadow:0 0 10px currentColor;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.45}}
+.online{color:var(--ice);background:var(--ice)}
+.sub-box{font-size:13px;margin-bottom:15px;word-break:break-all;font-family:"Consolas",monospace;background:var(--code);padding:14px;border-radius:10px;border:1px solid var(--line);border-left:3px solid var(--flame);color:var(--flame2);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.copy-btn{background:linear-gradient(180deg,var(--leather),var(--leather2));border:1px solid rgba(255,211,107,.35);color:var(--flame2);padding:7px 13px;border-radius:8px;cursor:pointer;font-size:11px;font-weight:600;transition:all .2s;white-space:nowrap}
+.copy-btn:hover{filter:brightness(1.25);transform:translateY(-1px)}
+.telegram-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--ice2),var(--ice));color:#052029;border:none;padding:12px 16px;border-radius:10px;cursor:pointer;font-size:14px;font-weight:700;text-decoration:none;width:100%;transition:all .2s;box-shadow:0 6px 18px rgba(125,211,252,.25)}
+.telegram-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(125,211,252,.4)}
+.sync-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
+.sync-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(180deg,#6a4630,var(--leather2));border:1px solid rgba(125,211,252,.35);color:var(--fur);padding:11px 8px;border-radius:10px;cursor:pointer;font-size:12.5px;font-weight:500;text-decoration:none;transition:all .2s;text-align:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.sync-btn:hover{border-color:var(--ice);box-shadow:0 0 14px rgba(125,211,252,.35);transform:translateY(-1px)}
+.sync-btn.disabled{opacity:.4;cursor:not-allowed;pointer-events:none}
+.sync-note{font-size:11px;color:var(--muted);margin:-4px 0 15px;font-style:italic}
+.info-meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;margin-top:5px}
+.info-meta span strong{color:var(--fur)}
+.time-expired{color:var(--red)!important}
+.instruction-section{margin-top:25px}
+.section-title{font-size:15px;font-weight:700;color:var(--fur);margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.section-title::before{content:"";flex:none;width:9px;height:9px;transform:rotate(45deg);background:var(--red);box-shadow:0 0 0 3px rgba(226,59,59,.25)}
+.guide-box{background:var(--card);padding:17px;border-radius:14px;font-size:13px;color:#cfe0e6;border:1px solid var(--line);line-height:1.65;margin-bottom:16px}
+.guide-box p{margin:0 0 10px}
+.guide-box ul,.guide-box ol{margin:0;padding-left:20px}
+.guide-box li{margin-bottom:6px}
+.guide-box li::marker{color:var(--red)}
+.guide-box a{color:var(--ice);text-decoration-color:rgba(125,211,252,.4)}
+.guide-box code{background:var(--code);color:var(--flame2);padding:1px 6px;border-radius:5px;font-family:"Consolas",monospace;font-size:12px}
+.highlight{color:var(--flame2);font-weight:600}
+.table-container{overflow-x:auto;margin-top:10px}
+table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}
+th,td{padding:9px 10px;border:1px solid var(--line);vertical-align:top}
+th{background:rgba(125,211,252,.14);color:var(--ice2)}
+tr:nth-child(even) td{background:rgba(255,255,255,.03)}
+.footer{text-align:center;margin-top:34px;font-size:12px;color:var(--muted);line-height:1.8}
+.footer b{color:var(--red)}
+.expired-note{font-size:11px;color:var(--muted);margin-top:8px;font-style:italic}
+.expired-note span{color:var(--flame)}
+.toggle-server-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;border:none;padding:15px 20px;border-radius:14px;cursor:pointer;font-size:15px;font-weight:700;width:100%;transition:all .3s;text-align:center;box-shadow:0 6px 20px rgba(226,59,59,.3);margin:25px 0}
+.toggle-server-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,154,60,.4);background:linear-gradient(135deg,#f0562f,var(--red2))}
+.toggle-server-btn svg{transition:transform .3s}
+.toggle-server-btn.active svg{transform:rotate(180deg)}
+#self-host-article{max-height:0;overflow:hidden;opacity:0;transition:max-height .5s cubic-bezier(0,1,0,1),opacity .4s ease}
+#self-host-article.show{max-height:5000px;opacity:1;transition:max-height 1s ease-in-out,opacity .5s ease}
+.code-block{font-family:"Consolas",monospace;background:var(--code);padding:13px;border-radius:10px;border:1px solid var(--line);color:var(--fur);overflow-x:auto;font-size:12px;line-height:1.55;margin:10px 0}
+.code-ini{color:var(--flame)}
+.kv-steps{list-style-type:none!important;padding-left:0!important}
+.kv-steps>li{background:rgba(255,255,255,.04);padding:14px;border-radius:10px;margin-bottom:15px!important;border:1px solid var(--line)}
+.kv-img-placeholder{display:block;width:100%;max-width:450px;margin:10px auto;border-radius:8px;border:1px solid var(--line);opacity:.88}
+@media(max-width:420px){.title{font-size:21px}.sync-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 
+<div class="bg-hakuma"></div>
+<div class="embers" id="embers"></div>
 <div class="container">
-  <div class="title">Máy chủ thử nghiệm VLESS miễn phí - 4G nền tiktok</div>
+<div class="hero">
+  <svg viewBox="0 0 130 140" role="img" aria-label="Hakuma - sói trắng khăn đỏ">
+    <path d="M18 98 Q65 130 112 98 L122 122 Q65 156 8 122Z" fill="#c92a33"/>
+    <path d="M100 112 L128 104 L118 126 L126 138 L104 130Z" fill="#e23b3b"/>
+    <path d="M30 14 L52 40 Q65 36 78 40 L100 14 L106 60 Q106 92 65 112 Q24 92 24 60Z" fill="#eaf3f7" stroke="#9db8c7" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M34 26 L47 42 L35 50Z M96 26 L83 42 L95 50Z" fill="#b9d3e0"/>
+    <path d="M70 40 L88 54" stroke="#2b2230" stroke-width="4" stroke-linecap="round"/>
+    <path d="M70 48 L84 58" stroke="#2b2230" stroke-width="3" stroke-linecap="round"/>
+    <path d="M38 64 L56 68 L53 74 L38 70Z" fill="#38bdf8"/>
+    <path d="M92 64 L74 68 L77 74 L92 70Z" fill="#38bdf8"/>
+    <circle cx="50" cy="70" r="1.8" fill="#06202b"/><circle cx="80" cy="70" r="1.8" fill="#06202b"/>
+    <path d="M36 58 L56 63 M94 58 L74 63" stroke="#cfe0ea" stroke-width="3.5" stroke-linecap="round"/>
+    <ellipse cx="65" cy="90" rx="8" ry="5.5" fill="#3b2a2a"/>
+    <path d="M55 99 Q65 106 77 98" stroke="#3b2a2a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </svg>
+</div>
+<div class="title">Máy chủ thử nghiệm VLESS miễn phí<br><em>4G nền TikTok</em></div>
+<div class="tagline">Lưỡi giáo băng · Khăn đỏ · Hakuma</div>
+<div class="spear"></div>
+
 
   <div class="card">
     <span class="label">Link đăng ký (VLESS-WS)</span>
@@ -547,7 +289,7 @@ python main.py</pre>
   </div>
 
   <div class="footer">
-    © 2026 VLESS Proxy by kokoromagic & HuskyDG
+    © 2026 VLESS Proxy by kokoromagic &amp; HuskyDG<br>Giao diện chủ đề <b>Hakuma</b> 🐺❄️🔥
   </div>
 </div>
 
@@ -600,5 +342,20 @@ function toggleArticle() {
 }
 </script>
 
+<script>
+(function(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var box=document.getElementById("embers");
+  for(var i=0;i<16;i++){
+    var e=document.createElement("i");
+    e.style.left=Math.random()*100+"%";
+    e.style.setProperty("--dx",(Math.random()*120-60)+"px");
+    e.style.animationDuration=(7+Math.random()*9)+"s";
+    e.style.animationDelay=(-Math.random()*14)+"s";
+    e.style.background=Math.random()>.5?"#ff9a3c":"#ffd36b";
+    box.appendChild(e);
+  }
+})();
+</script>
 </body>
 </html>
