@@ -4,10 +4,10 @@
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#Free%20VNPT",
         "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@vega-prime.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#Free%20Mobifone"
     ],
-    "ip": "64.236.146.117",
+    "ip": "20.64.173.177",
     "wshost": "hakuma.huskydg.dpdns.org",
     "wspath": "/tiktok4g",
     "transport": "xhttp",
     "xhttp_mode": "auto",
-    "start_time": 1792703173
+    "start_time": 1792721188
 }
