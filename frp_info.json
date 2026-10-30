@@ -1,13 +1,12 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#Tiktok",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#Free%20VNPT",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@vega-prime.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#Free%20Mobifone"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#FreeTiktok",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#FreeVNPT"
     ],
-    "ip": "68.154.117.39",
+    "ip": "132.196.82.2",
     "wshost": "hakuma.huskydg.dpdns.org",
     "wspath": "/tiktok4g",
     "transport": "xhttp",
     "xhttp_mode": "auto",
-    "start_time": 1793351694
+    "start_time": 1793366555
 }
