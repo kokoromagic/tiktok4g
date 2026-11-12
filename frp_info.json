@@ -1,12 +1,21 @@
 {
     "payloads": [
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#FreeTiktok",
-        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=hakuma.huskydg.dpdns.org&sni=hakuma.huskydg.dpdns.org&mode=auto&alpn=h3%2Ch2#FreeVNPT"
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@bright-sirius-star.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=vlessvietnam.huskydg.dpdns.org&sni=vlessvietnam.huskydg.dpdns.org&mode=auto&extra=%7B%22mode%22%3A%22auto%22%2C%22xPaddingBytes%22%3A%22100-500%22%2C%22xPaddingHeader%22%3A%22X-Request-Id%22%2C%22xPaddingKey%22%3A%22_cb%22%2C%22xPaddingMethod%22%3A%22tokenish%22%2C%22xPaddingObfsMode%22%3Atrue%2C%22xPaddingPlacement%22%3A%22header%22%7D&x_padding_bytes=100-500&alpn=h3%2Ch2#FreeTiktok",
+        "vless://975d240f-dd09-4915-a88e-7ee8804bb7c7@alpha-rigel-core.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=vlessvietnam.huskydg.dpdns.org&sni=vlessvietnam.huskydg.dpdns.org&mode=auto&extra=%7B%22mode%22%3A%22auto%22%2C%22xPaddingBytes%22%3A%22100-500%22%2C%22xPaddingHeader%22%3A%22X-Request-Id%22%2C%22xPaddingKey%22%3A%22_cb%22%2C%22xPaddingMethod%22%3A%22tokenish%22%2C%22xPaddingObfsMode%22%3Atrue%2C%22xPaddingPlacement%22%3A%22header%22%7D&x_padding_bytes=100-500&alpn=h3%2Ch2#FreeVNPT"
     ],
-    "ip": "172.178.118.82",
-    "wshost": "hakuma.huskydg.dpdns.org",
+    "ip": "52.242.221.243",
+    "wshost": "vlessvietnam.huskydg.dpdns.org",
     "wspath": "/tiktok4g",
     "transport": "xhttp",
     "xhttp_mode": "auto",
-    "start_time": 1793456738
+    "xhttp_padding_obfs": {
+        "mode": "auto",
+        "xPaddingBytes": "100-500",
+        "xPaddingHeader": "X-Request-Id",
+        "xPaddingKey": "_cb",
+        "xPaddingMethod": "tokenish",
+        "xPaddingObfsMode": true,
+        "xPaddingPlacement": "header"
+    },
+    "start_time": 1794455042
 }
