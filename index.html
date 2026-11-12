@@ -130,10 +130,8 @@ tr:nth-child(even) td{background:rgba(255,255,255,.03)}
       <button class="copy-btn" onclick="copySubscription()">Copy URL</button>
     </div>
     <div class="sync-grid">
-      <button class="sync-btn" onclick="syncApp('singbox')">📦 Đồng bộ sing-box</button>
       <button class="sync-btn" onclick="syncApp('v2rayng')">🚀 Đồng bộ v2rayNG</button>
-      <button class="sync-btn" onclick="syncApp('clash')">⚡ Đồng bộ Clash</button>
-      <button class="sync-btn disabled" title="Shadowrocket dùng scheme riêng, chưa xác nhận hoạt động">🍭 Shadowrocket (?)</button>
+      <button class="sync-btn" onclick="syncApp('magicv2ray')">⚡ Đồng bộ Magic V2Ray</button>
     </div>
     <p class="sync-note">💡 Bấm nút tương ứng để ứng dụng tự động import cấu hình (cần đã cài app trước).</p>
     <a href="https://t.me/vless4gtiktok" target="_blank" class="telegram-btn">
@@ -262,30 +260,6 @@ python main.py</pre>
       </ul>
     </div>
 
-    <div class="section-title">Android (Không Root) - v2rayNG</div>
-    <div class="guide-box">
-      <ul>
-        <li>Tải và cài đặt ứng dụng <a href="https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_2.2.5-fdroid_arm64-v8a.apk" target="_blank"><span class="highlight">v2rayNG</span></a>.</li>
-        <li>Sao chép <b>Link đăng ký</b> phía trên.</li>
-        <li>Mở ứng dụng <a href="https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_2.2.5-fdroid_arm64-v8a.apk" target="_blank"><span class="highlight">v2rayNG</span></a> trên thiết bị.</li>
-        <li>Bấm vào dấu <b>[+]</b> ở góc phải, chọn <b>Nhập cấu hình từ clipboard</b>.</li>
-        <li>Quay trở lại giao diện danh sách chính, chọn máy chủ TLS hoặc HTTP để kết nối.</li>
-      </ul>
-    </div>
-    
-    <div class="section-title">Android (Rooted) - Magic V2Ray Module</div>
-    <div class="guide-box">
-      <p><i>Magic V2Ray là một công cụ mạng nâng cao được thiết kế riêng cho điện thoại Android đã root. Bằng cách kết hợp các lõi proxy hàng đầu hiện nay, dự án tạo ra một kết nối mượt mà xuyên suốt toàn hệ thống và bao phủ mọi ứng dụng của bạn.</i></p>
-      <ul>
-        <li>Tải xuống bản phát hành <b>.zip</b> mới nhất từ trang GitHub chính thức của dự án <a href="https://magicv2ray.duckdns.org/"><span class="highlight">Magic V2Ray</span></a>.</li>
-        <li>Flash file module thông qua trình quản lý <b>Magisk</b> hoặc <b>KernelSU manager</b>, sau đó tiến hành khởi động lại thiết bị.</li>
-        <li>Mở giao diện cấu hình Web UI cục bộ của ứng dụng bằng cách nhấn nút <b>Play</b> bên trong quản lý KernelSU / APatch / KSUWebUIStandalone .</li>
-        <li>Điền <b>Link đăng ký</b> vào ô nhập và nhấn nút <b>Process Connect Link</b> để tải danh sách cấu hình.</li>
-        <li>Nhấn vào nút <b>Save and apply configurations</b> để khởi động dịch vụ VPN.</li>
-        <li>Chọn máy chủ để kết nối rồi nhấn vào nút <b>Start engine</b> để kết nối.</li>
-      </ul>
-    </div>
-
   </div>
 
   <div class="footer">
@@ -317,14 +291,11 @@ function syncApp(app) {
   let deepLink = "";
 
   switch (app) {
-    case "singbox":
-      deepLink = "sing-box://import-remote-profile?url=" + encoded;
-      break;
     case "v2rayng":
       deepLink = "v2rayng://install-config?url=" + encoded;
       break;
-    case "clash":
-      deepLink = "v2rayng://install-config?url=" + encoded;
+    case "magicv2ray":
+      deepLink = "magicv2ray://install-config?url=" + encoded;
       break;
     default:
       return;
