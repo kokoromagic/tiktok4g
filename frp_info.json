@@ -3,7 +3,7 @@
         "vless://4a2e5c83-b78f-552a-a48e-29f830a7b41e@bright-sirius-star.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=vlessvietnam.hakumaworld.dpdns.org&sni=vlessvietnam.hakumaworld.dpdns.org&mode=auto&extra=%7B%22mode%22%3A%22auto%22%2C%22xPaddingBytes%22%3A%22100-500%22%2C%22xPaddingHeader%22%3A%22X-Request-Id%22%2C%22xPaddingKey%22%3A%22_cb%22%2C%22xPaddingMethod%22%3A%22tokenish%22%2C%22xPaddingObfsMode%22%3Atrue%2C%22xPaddingPlacement%22%3A%22header%22%7D&x_padding_bytes=100-500&alpn=h3%2Ch2#FreeTiktok",
         "vless://4a2e5c83-b78f-552a-a48e-29f830a7b41e@alpha-rigel-core.huskydg.dpdns.org:443?type=xhttp&encryption=none&security=tls&ech=&path=%2Ftiktok4g&host=vlessvietnam.hakumaworld.dpdns.org&sni=vlessvietnam.hakumaworld.dpdns.org&mode=auto&extra=%7B%22mode%22%3A%22auto%22%2C%22xPaddingBytes%22%3A%22100-500%22%2C%22xPaddingHeader%22%3A%22X-Request-Id%22%2C%22xPaddingKey%22%3A%22_cb%22%2C%22xPaddingMethod%22%3A%22tokenish%22%2C%22xPaddingObfsMode%22%3Atrue%2C%22xPaddingPlacement%22%3A%22header%22%7D&x_padding_bytes=100-500&alpn=h3%2Ch2#FreeVNPT"
     ],
-    "ip": "20.29.53.29",
+    "ip": "3.42.157.193",
     "wshost": "vlessvietnam.hakumaworld.dpdns.org",
     "wspath": "/tiktok4g",
     "transport": "xhttp",
@@ -17,5 +17,5 @@
         "xPaddingObfsMode": true,
         "xPaddingPlacement": "header"
     },
-    "start_time": 1794564676
+    "start_time": 1794582701
 }
